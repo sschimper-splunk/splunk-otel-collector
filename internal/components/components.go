@@ -199,6 +199,7 @@ func Get() (otelcol.Factories, error) {
 		haproxyreceiver.NewFactory(),
 		hostmetricsreceiver.NewFactory(),
 		httpcheckreceiver.NewFactory(),
+		icmpcheckreceiver.NewFactory(),
 		iisreceiver.NewFactory(),
 		influxdbreceiver.NewFactory(),
 		jaegerreceiver.NewFactory(),
@@ -249,7 +250,6 @@ func Get() (otelcol.Factories, error) {
 		windowsperfcountersreceiver.NewFactory(),
 		zipkinreceiver.NewFactory(),
 		zookeeperreceiver.NewFactory(),
-		icmpcheckreceiver.NewFactory(),
 	)
 	if err != nil {
 		errs = append(errs, err)
